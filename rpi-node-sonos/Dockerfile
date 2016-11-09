@@ -4,9 +4,12 @@
 # - Build it:
 #     docker build -t rpi-node-sonos .
 #
-# - This container will commnunicate over UPNP and has to be in the same network
-#   than your sonos devices, thus, you should use the host's network stack:
+# - Run it. Thnode app will commnunicate over UPNP and has to be in the same network
+#   than your sonos devices, thus, you should use the docker host's network stack:
 #     docker run --net=host --restart=always --name=rpi-node-sonos-01 rpi-node-sonos
+#
+# - Use it:
+#     http://<raspberry_pi_ip>:5005
 #
 
 FROM hypriot/rpi-node
